@@ -1,0 +1,25 @@
+{
+  "name": "@afsv/eslint-config-base",
+  "version": "0.1.1",
+  "description": "Base ESLint config",
+  "main": "index.js",
+  "repository": "git@github.com:mdafanasev/eslint-config-base.git",
+  "author": "Maxim Afanasev <max@afsv.me>",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write \"*.{js,json}\"",
+    "format:check": "prettier --check \"*.{js,json}\"",
+    "test": "eslint -c index.js test/sample.js"
+  },
+  "volta": {
+    "node": "17.0.0",
+    "npm": "8.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.1.0",
+    "prettier": "^2.4.1"
+  },
+  "peerDependencies": {
+    "eslint": "^8.1.0"
+  }
+}
