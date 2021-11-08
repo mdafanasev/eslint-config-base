@@ -1,0 +1,26 @@
+name: Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '17.x'
+          registry-url: 'https://registry.npmjs.com'
+          scope: '@afsv'
+      - run: npm install
+      - run: npm run format:check
+      - run: npm run test
