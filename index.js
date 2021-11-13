@@ -218,7 +218,7 @@ module.exports = {
     'object-property-newline': 'off',
     'object-shorthand': 'off',
     'one-var-declaration-per-line': 'off',
-    'one-var': 'error',
+    'one-var': ['error', 'never'],
     'operator-assignment': 'off',
     'operator-linebreak': 'off',
     'padded-blocks': 'off',
